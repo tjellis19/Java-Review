@@ -21,7 +21,10 @@ public class Fan {
     
     public Fan()
     {
-        
+        this.speed = SLOW;
+        this.on = false;
+        this.radius = 5;
+        this.color = "blue";
     }
 
     public int getSpeed() {
@@ -58,6 +61,13 @@ public class Fan {
     
     public String toString()
     {
-        return "";
+        if (on)
+        {
+            return "Fan is on. \nFan speed: " + speed + "\nFan color: " + color
+                    + "\nFan radius: " + radius;
+        }
+        else
+            return "Fan is off. \nFan color: " + color
+                    + "\nFan radius: " + radius;
     }
 }
